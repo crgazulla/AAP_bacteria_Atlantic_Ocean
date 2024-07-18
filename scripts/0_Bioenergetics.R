@@ -1,7 +1,7 @@
 library(tidyverse)
 
 light <- read_csv("data/light.csv")
-POS_data <- read_csv("data/POSEIDONexp_data.csv")
+POS_data <- read_csv("data/expedition_data.csv")
 
 light_POS_data <- POS_data %>% 
   inner_join(light) %>% 
