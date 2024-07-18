@@ -1,7 +1,8 @@
 library(tidyverse)
 
 #Figure 4A
-fig4A <- phototrophy_github %>% 
+
+fig4A <- phototrophy %>% 
   filter(station > 4) %>%
   ggplot(aes(x=ratio_CDEC, y=DCM_layer, fill=DCM_layer))+
   geom_boxplot(alpha=0.7)+
@@ -18,7 +19,6 @@ integrated_data <- read_csv("github_test/integrated_data.csv")
 groups <- c("Chla_light_int" = "#21b517",
             "BChla_light_int" = "#ab17b5") #7019a8
 
-
 fig4B <- integrated_data %>%
   filter(station>4) %>% 
   select(latitude, BChla_light_int, Chla_light_int) %>% 
@@ -33,6 +33,5 @@ fig4B <- integrated_data %>%
   ylab("Depth integrated light energy captured \n (KJ/m2 day)")+
   xlab("Latitude")+
   theme_bw()
-
 
 fig4A+fig4B
