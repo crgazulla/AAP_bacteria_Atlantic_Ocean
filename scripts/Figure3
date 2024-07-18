@@ -1,7 +1,7 @@
 library(tidyverse)
 
 #Figure 3A:
-fig3A<-phototrophy_github %>% 
+fig3A <- phototrophy %>% 
   filter(station > 4) %>% 
   select(CDEC_Bchla, CDEC_Chla) %>% 
   pivot_longer(1:2, names_to = "pigment", values_to = "CDEC") %>% 
@@ -13,7 +13,7 @@ fig3A<-phototrophy_github %>%
   theme_bw()+theme(axis.text=element_text(size=8))
 
 #Figure 3B 
-phototrophy_github$DCM_layer <- factor(phototrophy_github$DCM_layer, levels = c("below_DCM",
+phototrophy$DCM_layer <- factor(phototrophy$DCM_layer, levels = c("below_DCM",
                                                                     "DCM",
                                                                     "above_DCM",
                                                                     "surf"))
@@ -23,7 +23,7 @@ DCMlayers <- c("surf" = "#93D5B1",
                "below_DCM" = "#415191", 
                "deep" = "#332848")
 
-fig3B0<-phototrophy_github %>% 
+fig3B0<-phototrophy %>% 
   filter(station > 4) %>% 
   select(CDEC_Bchla, CDEC_Chla, DCM_layer) %>% 
   pivot_longer(1:2, names_to = "pigment", values_to = "CDEC") %>% 
