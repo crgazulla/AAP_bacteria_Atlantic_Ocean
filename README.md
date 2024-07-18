@@ -1,3 +1,3 @@
-# AAP bacteria in the Atlantic Ocean
+# Scripts for AAP bacteria in the Atlantic Ocean
 
-This is a test
+By Carlota R. Gazulla
