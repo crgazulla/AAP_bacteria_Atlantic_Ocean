@@ -3,7 +3,7 @@ library(tidyverse) # package for tidying tables
 library(reshape2) #to use melt function
 
 
-surf_chla	<- nc_open("data/SNPP_VIIRS.20190301_20190331.L3m.MO.CHL.chlor_a.9km.nc")
+surf_chla <- nc_open("data/SNPP_VIIRS.20190301_20190331.L3m.MO.CHL.chlor_a.9km.nc")
 POS_data <- read_csv("github_test/previous_phototrophy.csv") 
 
 
