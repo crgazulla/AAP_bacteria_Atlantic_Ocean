@@ -1,3 +1,5 @@
+library(tidyverse)
+
 #Figure 3A:
 fig3A<-phototrophy_github %>% 
   filter(station > 4) %>% 
