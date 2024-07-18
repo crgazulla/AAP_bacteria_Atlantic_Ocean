@@ -1,7 +1,7 @@
 library(ncdf4) # package for netcdf manipulation
 library(tidyverse) # package for tidying tables
 library(reshape2) #to use melt function
-library(cowplot) #to use save_plot function
+
 
 surf_chla	<- nc_open("data/SNPP_VIIRS.20190301_20190331.L3m.MO.CHL.chlor_a.9km.nc")
 POS_data <- read_csv("github_test/previous_phototrophy.csv") 
