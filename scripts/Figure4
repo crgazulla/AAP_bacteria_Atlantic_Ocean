@@ -14,7 +14,7 @@ fig4A <- phototrophy %>%
 
 #Figure 4B
 
-integrated_data <- read_csv("github_test/integrated_data.csv")
+integrated_data <- read_csv("data/integrated_data.csv")
 
 groups <- c("Chla_light_int" = "#21b517",
             "BChla_light_int" = "#ab17b5") #7019a8
