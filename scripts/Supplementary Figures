@@ -1,6 +1,7 @@
-Figures with no sensible data
+#Scripts for Supplementary Figures S7, S8 and S9.
 
-Figure S7
+
+#Figure S7
 
 expedition_data %>% 
   filter(DCM == "surf") %>% 
@@ -9,7 +10,6 @@ expedition_data %>%
   geom_smooth(method='lm', color="black",size=0.5)+
   ylab("Bacteriochlorophyll"~italic(a)~"(pM)")+
   xlab("Chlorophyll"~italic(a)~"(pM)")+
-  #geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1,vjust=1)+
   geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
   geom_text(aes(label=ifelse(station==16,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
   theme_bw()
