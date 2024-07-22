@@ -2,17 +2,26 @@
 #Panels A, B (left) and C (left) were generated with Ocean Data View.
 
 library(tidyverse)
+expedition_data <- readCSV####
 
+#Figure 2, panel B right
 
-
- %>% 
-  filter(DCM == "surf") %>% 
-  ggplot(aes(x=Chla, y=Bchla))+
+expedition_data %>% 
+  filter(Bchla > 0) %>% 
+  ggplot(aes(x=ab_aaps, y=Chla))+
   geom_point()+
   geom_smooth(method='lm', color="black",size=0.5)+
   ylab("Bacteriochlorophyll"~italic(a)~"(pM)")+
   xlab("Chlorophyll"~italic(a)~"(pM)")+
-  #geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1,vjust=1)+
-  geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
-  geom_text(aes(label=ifelse(station==16,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
+  theme_bw()
+
+#Figure 2, panel C right
+
+expedition_data %>% 
+  filter(Bchla > 0) %>% 
+  ggplot(aes(x=Bchla, y=Chla))+
+  geom_point()+
+  geom_smooth(method='lm', color="black",size=0.5)+
+  ylab("Bacteriochlorophyll"~italic(a)~"(pM)")+
+  xlab("Chlorophyll"~italic(a)~"(pM)")+
   theme_bw()
