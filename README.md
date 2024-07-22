@@ -17,4 +17,8 @@ A main file ```Metadata Gazulla et al 2024 L&O.xlsx``` summarizes all the metada
   
 Scripts
 -
-
+- ```0_Bioenergetics.R``` contain all the light and bioenergetics calculations. It should be executed before the next scripts.
+- ```Figure1_Mean_surface_chla.R``` is to generate Figure 1.
+- ```Figure2.R``` *under construction* 
+- ```Figure3.R``` to generate Figure 3.
+- ```Figure4.R``` to generate Figure 4.
