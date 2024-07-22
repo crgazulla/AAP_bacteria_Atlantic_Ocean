@@ -17,7 +17,20 @@ expedition_data %>%
 
 #Figure S8
 
+DCMlayers <- c("surf" = "#93D5B1", 
+               "above_DCM" = "#5FAEAE",
+               "DCM"= "#4A82A1",
+               "below_DCM" = "#415191", 
+               "deep" = "#332848")
 
+phototrophy %>% 
+  mutate(bchla_prop = (Bchla/(Bchla + Chla))*100 ) %>% 
+  ggplot(aes(x=bchla_prop, y=DCM_layer, fill=DCM_layer)) +
+  geom_boxplot()+
+  scale_fill_manual(values=DCMlayers)+
+  ylab(" ")+
+  xlab("Bacteriochlorophyll"~italic(a)~"(%)")+
+  theme_bw()+theme(legend.position = "none")
 
 #Figure S9
 
