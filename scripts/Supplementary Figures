@@ -2,6 +2,19 @@ Figures with no sensible data
 
 Figure S7
 
+expedition_data %>% 
+  filter(DCM == "surf") %>% 
+  ggplot(aes(x=Chla, y=Bchla))+
+  geom_point()+
+  geom_smooth(method='lm', color="black",size=0.5)+
+  ylab("Bacteriochlorophyll"~italic(a)~"(pM)")+
+  xlab("Chlorophyll"~italic(a)~"(pM)")+
+  #geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1,vjust=1)+
+  geom_text(aes(label=ifelse(station<4,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
+  geom_text(aes(label=ifelse(station==16,as.character(station),'')),hjust=1.5,vjust=1.5, size=3)+
+  theme_bw()
+
+
 Figure S8
 
 Figure S9
