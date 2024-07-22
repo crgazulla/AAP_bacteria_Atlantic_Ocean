@@ -11,7 +11,7 @@ expedition_data %>%
   ggplot(aes(x=ab_aaps, y=Chla))+
   geom_point()+
   geom_smooth(method='lm', color="black",size=0.5)+
-  ylab("Bacteriochlorophyll"~italic(a)~"(pM)")+
+  ylab("AAP bacteria (cells/mL)")+
   xlab("Chlorophyll"~italic(a)~"(pM)")+
   theme_bw()
 
