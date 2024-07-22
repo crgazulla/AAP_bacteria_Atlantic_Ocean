@@ -2,11 +2,11 @@
 #Panels A, B (left) and C (left) were generated with Ocean Data View.
 
 library(tidyverse)
-expedition_data <- readCSV####
+POS_data <- read_csv("data/expedition_data.csv")
 
 #Figure 2, panel B right
 
-expedition_data %>% 
+POS_data %>% 
   filter(Bchla > 0) %>% 
   ggplot(aes(x=ab_aaps, y=Chla))+
   geom_point()+
@@ -17,7 +17,7 @@ expedition_data %>%
 
 #Figure 2, panel C right
 
-expedition_data %>% 
+POS_data %>% 
   filter(Bchla > 0) %>% 
   ggplot(aes(x=Bchla, y=Chla))+
   geom_point()+
