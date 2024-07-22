@@ -15,6 +15,21 @@ expedition_data %>%
   theme_bw()
 
 
-Figure S8
+#Figure S8
 
-Figure S9
+
+
+#Figure S9
+
+phototrophy$DCM_layer <- factor(phototrophy$DCM_layer, levels=c("below_DCM",
+                                                                "DCM",
+                                                                "above_DCM",
+                                                                "surf"))
+
+phototrophy %>% 
+  select(DCM_layer, PSU_L_Chla, PSU_L_Bchla) %>% 
+  pivot_longer(2:3, names_to = "pigment", values_to = "PSU_L") %>% 
+  ggplot(aes(x=PSU_L, y=DCM_layer))+
+  geom_boxplot()+
+  facet_wrap(~pigment, scales="free")+
+  theme_bw()
