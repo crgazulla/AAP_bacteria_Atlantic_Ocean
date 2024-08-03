@@ -2,7 +2,7 @@
 A manuscript under review in *Limnology & Oceanography*
 (BioRxiv doi: doi: https://doi.org/10.1101/2023.11.28.568994)
 
-By Carlota R. Gazulla
+Scripts by Carlota R. Gazulla
 
 Data and scripts are organized as follows:
 
